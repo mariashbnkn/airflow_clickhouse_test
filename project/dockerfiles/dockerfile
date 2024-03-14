@@ -1,0 +1,6 @@
+FROM apache/airflow:2.8.3
+RUN airflow db init
+RUN airflow users  create --role Admin --username admin --email admin --firstname admin --lastname admin --password admin
+RUN pip install requests
+RUN pip install pandas
+RUN pip install clickhouse_driver
